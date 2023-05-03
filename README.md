@@ -1,7 +1,8 @@
 
 <h1>Token Storage</h1>
 
-<p>Token Storage is a smart contract that allows users to deposit and withdraw ERC20 tokens in a decentralized and secure way. The contract includes a capacity limit, preventing the deposit of tokens that exceed the limit.</p>
+<p>Token Storage is a solidity smart contract that manages the storage and withdrawal of ERC20 tokens. The contract defines five different slabs with different capacity levels, and tracks the amount of tokens deposited by each user in each slab.The contract includes a capacity limit, preventing the deposit of tokens that exceed the limit.
+</p>
 
 <h2>Getting Started</h2>
 
