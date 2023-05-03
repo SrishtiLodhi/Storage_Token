@@ -1,0 +1,17 @@
+Here are some design/architectural patterns and decisions used in the TokenStorage contract:
+
+1. Smart contract design: TokenStorage is a smart contract that is designed to store tokens deposited by users.
+
+2. ERC20 interface: The contract imports the IERC20 interface from OpenZeppelin, which allows it to interact with any ERC20-compatible token.
+
+3. Events: The contract emits events for Deposited and Withdraw actions. These events are useful for tracking transactions and providing transparency to users.
+
+4. Mappings: The contract uses a mapping to keep track of the tokens deposited by each user. The mapping is indexed by depositer address and token address.
+
+5. Slab-based storage: The contract uses a slab-based storage system to limit the amount of tokens that can be deposited. There are 5 slabs, each with a maximum capacity. Users are assigned to a slab based on the amount of tokens they deposit.
+
+6. Data types: The contract uses uint8, uint256, and arrays to store data. The decimals variable is a uint8 that stores the number of decimals for the token. The MAX_CAPACITY variable is a uint256 that stores the maximum capacity for each slab. The slabMax array stores the maximum capacity for each slab.
+
+7. Error handling: The contract uses require statements to check for errors and revert transactions if necessary. For example, the deposit function checks whether the transfer amount exceeds the maximum capacity, and the withdraw function checks whether the user has sufficient balance.
+
+Overall, the TokenStorage contract implements several features for storing tokens securely and efficiently.
